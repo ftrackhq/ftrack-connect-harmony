@@ -1,0 +1,15 @@
+{
+    "id": "harmony:/base",
+    "title": "Base",
+    "description": "Low level common properties.",
+    "type": "object",
+    "properties": {
+        "harmony_type": {
+            "title": "harmony_type",
+            "description": "Reference to a governing schema id.",
+            "type": "string",
+            "pattern": "^harmony:/.+$"
+        }
+    },
+    "required": ["harmony_type"]
+}

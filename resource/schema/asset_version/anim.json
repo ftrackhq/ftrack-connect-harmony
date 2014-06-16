@@ -1,0 +1,34 @@
+{
+    "id": "harmony:/asset_version/anim",
+    "$mixin": {
+        "$ref": "harmony:/asset_version",
+        "hints": {
+            "/properties/components/items/properties/label/enum": "preserve"
+        }
+    },
+    "title": "animation",
+    "description": "animation.",
+    "type": "object",
+    "properties": {
+        "harmony_type": {
+            "pattern": "^harmony:/asset_version/anim$",
+            "default": "harmony:/asset_version/anim"
+        },
+        "components": {
+            "minItems": 1,
+            "items": {
+                "properties": {
+                    "label": {
+                        "enum": [
+                            "curves"
+                          ]
+                    }
+                }
+            }
+        },
+        "domain": {
+            "$mixin": {"$ref": "harmony:/domain/shot"}
+        }
+    },
+    "required": ["components"]
+}

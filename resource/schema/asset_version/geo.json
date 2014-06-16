@@ -1,0 +1,59 @@
+{
+    "id": "harmony:/asset_version/geo",
+    "$mixin": {
+        "$ref": "harmony:/asset_version",
+        "hints": {
+            "/properties/components/items/properties/label/enum": "preserve"
+        }
+    },
+    "title": "geometry",
+    "description": "geometry for a model.",
+    "type": "object",
+    "identifiers": [
+        "/domain/show/name", "/domain/asset/name", "/asset_name", "/variation",
+        "/lod"
+    ],
+    "properties": {
+        "harmony_type": {
+            "pattern": "^harmony:/asset_version/geo",
+            "default": "harmony:/asset_version/geo"
+        },
+        "components": {
+            "minItems": 1,
+            "items": {
+                "properties": {
+                    "label": {
+                        "enum": [
+                            "maya scene",
+                            "obj",
+                            "alembic"
+                          ]
+                    }
+                }
+            }
+        },
+        "domain": {
+            "$mixin": {"$ref": "harmony:/domain/asset"}
+        },
+        "lod": {
+            "title": "LOD",
+            "description": "Level of detail",
+            "type": "string",
+            "enum": [
+                "Highest",
+                "High",
+                "Medium",
+                "Low",
+                "Lowest"
+            ],
+            "order": 5.5
+        },
+        "variation": {
+            "title": "Variation",
+            "description": "Geometry variation.",
+            "type": "string",
+            "order": 5.6
+        }
+    },
+    "required": ["components", "lod", "variation"]
+}

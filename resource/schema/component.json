@@ -1,0 +1,28 @@
+{
+    "id": "harmony:/component",
+    "$mixin": {"$ref": "harmony:/base"},
+    "title": "component",
+    "description": "represent an asset_version of data.",
+    "type": "object",
+    "properties": {
+        "harmony_type": {
+            "pattern": "^harmony:/component$",
+            "default": "harmony:/component"
+        },
+        "label": {
+            "type": "string",
+            "title": "label",
+            "description": "high level classifier.",
+            "order": 1,
+            "default": "main"
+        },
+        "path": {
+            "type": "string",
+            "title": "path",
+            "description": "path to the data.",
+            "format": "filesystem-path",
+            "order": 2
+        }
+    },
+    "required": ["label", "path"]
+}

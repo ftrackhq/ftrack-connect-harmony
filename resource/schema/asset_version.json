@@ -1,0 +1,65 @@
+{
+    "id": "harmony:/asset_version",
+    "$mixin": {"$ref": "harmony:/base"},
+    "title": "asset version",
+    "description": "common asset version properties.",
+    "type": "object",
+    "properties": {
+        "harmony_type": {
+            "pattern": "^harmony:/asset_version.*$",
+            "default": "harmony:/asset_version"
+        },
+        "asset_name": {
+            "title": "asset name",
+            "description": "name of the asset.",
+            "type": "string",
+            "order": 1
+        },
+        "author": {
+            "$mixin": {"$ref": "harmony:/user"},
+            "title": "author",
+            "description": "creator of the asset version.",
+            "order": 3
+        },
+        "comment": {
+            "title": "comment",
+            "description": "additional information from author.",
+            "type": "string",
+            "format": "text",
+            "order": 5
+        },
+        "components": {
+            "title": "components",
+            "description": "components associated with this asset version.",
+            "type": "array",
+            "order": 6,
+            "items": {
+                "$mixin": {
+                    "$ref": "harmony:/component"
+                }
+            }
+        },
+        "created": {
+            "title": "created",
+            "description": "date and time of creation.",
+            "type": "string",
+            "format": "date-time",
+            "order": 4
+        },
+        "domain": {
+            "$mixin": {"$ref": "harmony:/domain"},
+            "order": 2
+        },
+        "version": {
+            "title": "version",
+            "description": "version of the asset.",
+            "type": "string",
+            "pattern": "^\\d{3}$",
+            "default": "001",
+            "order": 7
+        }
+    },
+    "required": [
+        "asset_name", "author", "created", "domain", "comment"
+    ]
+}

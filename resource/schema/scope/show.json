@@ -1,0 +1,26 @@
+{
+    "id": "harmony:/scope/show",
+    "$mixin": {"$ref": "harmony:/base"},
+    "title": "show",
+    "description": "the show.",
+    "type": "object",
+    "properties": {
+        "harmony_type": {
+            "pattern": "^harmony:/scope/show$",
+            "default": "harmony:/scope/show"
+        },
+        "id": {
+            "title": "show id",
+            "description": "unique identifier for the show.",
+            "type": "string",
+            "order": 1
+        },
+        "name": {
+            "title": "show name",
+            "description": "the display name for the show.",
+            "type": "string",
+            "order": 2
+        }
+    },
+    "required": ["id", "name"]
+}

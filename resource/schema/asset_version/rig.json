@@ -1,0 +1,35 @@
+{
+    "id": "harmony:/asset_version/rig",
+    "$mixin": {
+        "$ref": "harmony:/asset_version",
+        "hints": {
+            "/properties/components/items/properties/label/enum": "preserve"
+        }
+    },
+    "title": "rig",
+    "description": "a rig.",
+    "type": "object",
+    "properties": {
+        "harmony_type": {
+            "pattern": "^harmony:/asset_version/rig$",
+            "default": "harmony:/asset_version/rig"
+        },
+        "components": {
+            "minItems": 1,
+            "items": {
+                "properties": {
+                    "label": {
+                        "enum": [
+                            "maya scene",
+                            "alembic"
+                          ]
+                    }
+                }
+            }
+        },
+        "domain": {
+            "$mixin": {"$ref": "harmony:/domain/asset"}
+        }
+    },
+    "required": ["components"]
+}

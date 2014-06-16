@@ -1,0 +1,26 @@
+{
+    "id": "harmony:/resolution",
+    "$mixin": {"$ref": "harmony:/base"},
+    "title": "resolution",
+    "description": "image resolution.",
+    "type": "object",
+    "properties": {
+        "harmony_type": {
+            "pattern": "^harmony:/resolution$",
+            "default": "harmony:/resolution"
+        },
+        "width": {
+            "title": "width",
+            "description": "image width in pixels.",
+            "type": "integer",
+            "order": 2
+        },
+        "height": {
+            "title": "height",
+            "description": "image height in pixels.",
+            "type": "integer",
+            "order": 3
+        }
+    },
+    "required": ["width", "height"]
+}

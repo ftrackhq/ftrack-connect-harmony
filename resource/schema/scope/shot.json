@@ -1,0 +1,26 @@
+{
+    "id": "harmony:/scope/shot",
+    "$mixin": {"$ref": "harmony:/base"},
+    "title": "shot",
+    "description": "the shot.",
+    "type": "object",
+    "properties": {
+        "harmony_type": {
+            "pattern": "^harmony:/scope/shot$",
+            "default": "harmony:/scope/shot"
+        },
+        "id": {
+            "title": "shot id",
+            "description": "unique identifier for the shot.",
+            "type": "string",
+            "order": 1
+        },
+        "name": {
+            "title": "shot name",
+            "description": "the display name for the shot.",
+            "type": "string",
+            "order": 2
+        }
+    },
+    "required": ["id", "name"]
+}
