@@ -26,7 +26,8 @@
                         "enum": [
                             "maya scene",
                             "obj",
-                            "alembic"
+                            "alembic",
+                            "turntable"
                           ]
                     }
                 }
