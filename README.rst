@@ -4,6 +4,31 @@ ftrack connect harmony
 
 An example of using ftrack with `Harmony <https://github.com/4degrees/harmony/>`_
 
+************
+Dependencies
+************
+
+* Python >= 2.6, < 3
+* PySide >= 1.1.1
+* jsonpointer > 1.3
+* ftrack API
+* Harmony
+
+.. note::
+
+    Harmony is not yet officially released so you will have to download the
+    source and its dependencies manually from
+    https://github.com/4degrees/harmony and add it to your PYTHONPATH.
+
+To run this example you need the ftrack API to be installed or present on your
+PYTHONPATH with the relevant server and API Key environment variables set.
+
+In addition, add the *source* folder of this project to the PYTHONPATH.
+
+Then run::
+
+    $ python -m ftrack_connect_harmony
+
 *********************
 Copyright and license
 *********************
