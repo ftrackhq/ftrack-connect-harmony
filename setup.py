@@ -39,7 +39,9 @@ setup(
         '': 'source'
     },
     install_requires=[
-        'harmony'
+        'harmony',
+        'jsonpointer >= 1.3',
+        'PySide >= 1.1.1'
     ],
     tests_require=['pytest >= 2.3.5'],
     cmdclass={
